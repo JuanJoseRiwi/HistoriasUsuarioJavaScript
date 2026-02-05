@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductHub Pro - Sistema de Gestión Avanzado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- HEADER -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="header-title">
+                    <div class="app-logo">🛍️</div>
+                    <div>
+                        <h1>ProductHub Pro</h1>
+                        <p class="subtitle">Sistema Avanzado de Gestión de Productos</p>
+                    </div>
+                </div>
+                <button id="btnSincronizar" class="btn btn-sync">
+                    <span class="btn-icon">🔄</span>
+                    <span>Sincronizar Servidor</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- ESTADÍSTICAS -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-value" id="totalProductos">0</div>
+                        <div class="stat-label">Total Productos</div>
+                    </div>
+                    <div class="stat-icon primary">📦</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-value" id="valorTotal">$0.00</div>
+                        <div class="stat-label">Valor Total</div>
+                    </div>
+                    <div class="stat-icon success">💰</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-value" id="precioPromedio">$0.00</div>
+                        <div class="stat-label">Precio Promedio</div>
+                    </div>
+                    <div class="stat-icon warning">📊</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GRID PRINCIPAL -->
+        <div class="main-grid">
+            <!-- FORMULARIO -->
+            <div class="form-card">
+                <div class="form-header">
+                    <div class="form-header-icon">➕</div>
+                    <h2 id="formTitle">Nuevo Producto</h2>
+                </div>
+
+                <form id="formularioProducto">
+                    <div class="form-group">
+                        <label for="nombreProducto">
+                            Nombre del Producto <span class="required">*</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">🏷️</span>
+                            <input 
+                                type="text" 
+                                id="nombreProducto"
+                                class="with-icon"
+                                placeholder="Ej: MacBook Pro 16"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="precioProducto">
+                            Precio <span class="required">*</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">💵</span>
+                            <input 
+                                type="number" 
+                                id="precioProducto"
+                                class="with-icon"
+                                placeholder="0.00"
+                                step="0.01"
+                                min="0"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="categoriaProducto">Categoría</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">📁</span>
+                            <select id="categoriaProducto" class="with-icon">
+                                <option value="">Seleccionar categoría</option>
+                                <option value="Electrónica">📱 Electrónica</option>
+                                <option value="Ropa">👕 Ropa</option>
+                                <option value="Hogar">🏠 Hogar</option>
+                                <option value="Deportes">⚽ Deportes</option>
+                                <option value="Libros">📚 Libros</option>
+                                <option value="Juguetes">🎮 Juguetes</option>
+                                <option value="Otro">📦 Otro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descripcionProducto">Descripción</label>
+                        <textarea 
+                            id="descripcionProducto"
+                            placeholder="Describe las características principales del producto..."
+                        ></textarea>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-icon" id="submitIcon">✓</span>
+                            <span id="submitText">Agregar</span>
+                        </button>
+                        <button type="button" id="btnCancelar" class="btn btn-secondary">
+                            <span class="btn-icon">✕</span>
+                            <span>Cancelar</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- LISTA DE PRODUCTOS -->
+            <div class="products-card">
+                <div class="products-header">
+                    <h2 class="products-title">
+                        <span>📋</span>
+                        <span>Mis Productos</span>
+                    </h2>
+                </div>
+
+                <!-- BÚSQUEDA -->
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input 
+                        type="text" 
+                        id="searchInput"
+                        placeholder="Buscar productos por nombre..."
+                    >
+                </div>
+
+                <!-- FILTROS -->
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="todos">Todos</button>
+                    <button class="filter-btn" data-filter="Electrónica">Electrónica</button>
+                    <button class="filter-btn" data-filter="Ropa">Ropa</button>
+                    <button class="filter-btn" data-filter="Hogar">Hogar</button>
+                </div>
+
+                <!-- LISTA -->
+                <ul class="products-list" id="listaProductos"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTENEDOR DE NOTIFICACIONES -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

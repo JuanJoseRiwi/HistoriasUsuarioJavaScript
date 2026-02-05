@@ -1,0 +1,76 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "MacBook Pro 16",
+      "precio": 2499.99,
+      "categoria": "Electrónica",
+      "descripcion": "Laptop profesional con chip M3 Pro, 18GB RAM, SSD 512GB. Perfecta para desarrollo y diseño.",
+      "fechaCreacion": "2024-01-15T10:30:00.000Z"
+    },
+    {
+      "id": "2",
+      "nombre": "iPhone 15 Pro Max",
+      "precio": 1199.99,
+      "categoria": "Electrónica",
+      "descripcion": "Smartphone de última generación con chip A17 Pro, cámara de 48MP y pantalla Super Retina XDR.",
+      "fechaCreacion": "2024-01-16T14:20:00.000Z"
+    },
+    {
+      "id": "3",
+      "nombre": "AirPods Pro 2",
+      "precio": 249.99,
+      "categoria": "Electrónica",
+      "descripcion": "Auriculares inalámbricos con cancelación activa de ruido y audio espacial.",
+      "fechaCreacion": "2024-01-17T09:15:00.000Z"
+    },
+    {
+      "id": "4",
+      "nombre": "Camiseta Nike Dri-FIT",
+      "precio": 35.99,
+      "categoria": "Ropa",
+      "descripcion": "Camiseta deportiva con tecnología de absorción de humedad. Tallas S-XXL disponibles.",
+      "fechaCreacion": "2024-01-18T11:45:00.000Z"
+    },
+    {
+      "id": "5",
+      "nombre": "Sofá Modular 3 Plazas",
+      "precio": 899.99,
+      "categoria": "Hogar",
+      "descripcion": "Sofá elegante y cómodo con tapizado de tela premium. Incluye cojines decorativos.",
+      "fechaCreacion": "2024-01-19T16:30:00.000Z"
+    },
+    {
+      "id": "6",
+      "nombre": "Balón de Fútbol Adidas",
+      "precio": 29.99,
+      "categoria": "Deportes",
+      "descripcion": "Balón oficial FIFA, tamaño 5. Ideal para partidos profesionales y entrenamientos.",
+      "fechaCreacion": "2024-01-20T13:10:00.000Z"
+    },
+    {
+      "id": "7",
+      "nombre": "El Poder del Ahora",
+      "precio": 18.99,
+      "categoria": "Libros",
+      "descripcion": "Bestseller de Eckhart Tolle sobre mindfulness y vivir el presente. Tapa blanda, 256 páginas.",
+      "fechaCreacion": "2024-01-21T08:25:00.000Z"
+    },
+    {
+      "id": "8",
+      "nombre": "PlayStation 5",
+      "precio": 499.99,
+      "categoria": "Juguetes",
+      "descripcion": "Consola de videojuegos de última generación. Incluye control DualSense y juego de demostración.",
+      "fechaCreacion": "2024-01-22T15:40:00.000Z"
+    },
+    {
+      "id": "1769995539749",
+      "nombre": "egavd",
+      "precio": 234,
+      "categoria": "Ropa",
+      "descripcion": "ad",
+      "fechaCreacion": "2026-02-02T01:25:39.750Z"
+    }
+  ]
+}
